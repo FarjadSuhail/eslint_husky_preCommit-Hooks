@@ -6,6 +6,11 @@ module.exports = {
   },
   rules: {
     'linebreak-style': ['error', 'windows'],
+    'no-console': 'error',
+    'prefer-destructuring': ['error', {
+      array: false,
+      object: false,
+    }],
   },
   extends: 'airbnb-base',
   overrides: [
@@ -23,5 +28,12 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
   },
 };
